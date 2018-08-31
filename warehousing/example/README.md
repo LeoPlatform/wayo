@@ -4,4 +4,4 @@ TODO: if they have node/npm installed they can use npm run start and it will do 
 
 $ docker build . -t train-warehouse --no-cache
 
-$ docker run -it -v /Users/joseph/.aws:/root/.aws -v /Users/joseph/GitHub/wayo/warehousing/example/:/root/app train-warehouse
+$ docker run -it -v $HOME/.aws:/root/.aws -v $HOME/<git-clone-location>/warehousing/example:/root/app train-warehouse
