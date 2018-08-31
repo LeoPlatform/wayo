@@ -1,12 +1,13 @@
 {
 	"name": "example",
 	"version": "1.0.0",
+	"private": true,
 	"description": "",
 	"main": "app.js",
 	"scripts": {
-		"start": "leo test .",
-		"test": "mocha --require ./test/bootstrap.js --recursive -w",
-		"debug": "node-debug leo test ."
+		"test": "mocha test/**/*.test.js",
+		"clean": "find . -name \"node_modules\" -type d -exec rm -rf '{}' +",
+		"postinstall": "find . -name package.json -not -path \"**/node_modules/*\" -not -path \"./package.json\" | sed -e \"s/package.json//g\" | while read OUT; do echo $OUT && npm i --prefix $OUT; done"
 	},
 	"config": {
 		"leo": {
