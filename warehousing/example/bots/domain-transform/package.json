@@ -1,0 +1,25 @@
+{
+	"name": "domain_transform",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"directories": {
+		"test": "test"
+	},
+	"scripts": {
+		"test": "leo-cli test . "
+	},
+	"config": {
+		"leo": {
+			"type": "bot",
+			"memory": 128,
+			"timeout": 10,
+			"role": "ApiRole",
+			"env": {},
+			"cron": {
+				"settings": {},
+				"time": "0 */1 * * * * "
+			}
+		}
+	}
+}
