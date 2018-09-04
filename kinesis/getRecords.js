@@ -18,13 +18,13 @@ kinesis.getShardIterator({
   ShardIteratorType: ShardIteratorType.TRIM_HORIZON,
   StreamName: DEMO_STREAM,
 }, function(err, data) {
-  if (err) return console.log(err, err.stack); // an error occurred
+  if (err) return console.log(err, err.stack); 
   kinesis.getRecords({
     ShardIterator: data.ShardIterator,
     Limit: 10000
   }, function(err, data) {
-    if (err) return console.log(err, err.stack); // an error occurred
+    if (err) return console.log(err, err.stack); 
     const orders = data.Records.map(r => JSON.parse(r.Data.toString()))
-    console.log(orders);           // successful response
+    console.log(orders);
   });
 });
