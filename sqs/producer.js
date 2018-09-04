@@ -28,7 +28,9 @@ var generateParams = () => ({
   QueueUrl: DEMO_SQS_URL
 });
 
-setInterval(() => sqs.sendMessage(generateParams(), function(err) {
-  if (err) return console.log(err, err.stack); // an error occurred
-  console.log("Message Sent to Queue: " + DEMO_SQS_URL)
-}), EVERY_SECONDS * 1000)
+setInterval(() => 
+  sqs.sendMessage(generateParams(), function(err) {
+    if (err) return console.log(err, err.stack); // an error occurred
+    console.log("Message Sent to Queue: " + DEMO_SQS_URL)
+  })
+, EVERY_SECONDS * 1000)
