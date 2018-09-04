@@ -4,6 +4,7 @@ RUN apk add --update \
     jq \
     python \
     py-pip \
+    python2-dev \
     bash \
     postgresql-dev \
     alpine-sdk \
@@ -12,6 +13,7 @@ RUN apk add --update \
   && mkdir -p /root/app \
   && pip install --upgrade pip \
   && pip install awscli \
+  && pip install aws-sam-cli \
   && rm -rf /var/cache/apk/* 
 
 RUN npm install leo-cli@2.3.3 -g

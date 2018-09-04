@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  TestFunction:
+    Properties:
+      CodeUri: s3://leo-lambda-demo-117870855864/5cd424974621fde0685bce4213edab98
+      Environment:
+        Variables:
+          S3_BUCKET: leo-lambda-demo-117870855864
+      Handler: index.handler
+      Runtime: nodejs6.10
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31
