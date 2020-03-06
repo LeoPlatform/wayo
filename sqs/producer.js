@@ -3,7 +3,7 @@ const faker = require('faker')
 const sqs = new AWS.SQS({apiVersion: '2012-11-05'})
 
 const EVERY_SECONDS = 3
-const DEMO_SQS_URL = 'https://sqs.us-west-2.amazonaws.com/117870855864/demo-queue'
+const DEMO_SQS_URL = 'https://sqs.us-west-2.amazonaws.com/111111111111/demo-queue'
 
 var generateParams = () => ({
   MessageBody: JSON.stringify({

@@ -8,4 +8,4 @@ Resources:
       Runtime: nodejs6.10
       Environment:
         Variables: 
-          S3_BUCKET: leo-lambda-demo-117870855864
+          S3_BUCKET: leo-lambda-demo-111111111111

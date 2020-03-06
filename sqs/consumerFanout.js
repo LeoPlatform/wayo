@@ -3,7 +3,7 @@ const uuid = require('uuid')
 const sqs = new AWS.SQS({apiVersion: '2012-11-05'})
 const sns = new AWS.SNS({apiVersion: '2012-11-05'})
 
-const DEMO_SQS_URL = 'https://sqs.us-west-2.amazonaws.com/117870855864/demo-queue'
+const DEMO_SQS_URL = 'https://sqs.us-west-2.amazonaws.com/111111111111/demo-queue'
 const MAX_LONG_POLL = 20
 const AttributeNames = {
   All : 'All',
@@ -38,7 +38,7 @@ function processData(data) {
     var params = {
       Message: 'TEST FANOUT', /* required */
       Subject: 'TEST SUBJECT',
-      TopicArn: 'arn:aws:sns:us-west-2:117870855864:demo-fanout'
+      TopicArn: 'arn:aws:sns:us-west-2:111111111111:demo-fanout'
     };
     sns.publish(params, function(err, data) {
       if (err) return console.log(err, err.stack); // an error occurred
